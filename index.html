@@ -1,0 +1,436 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css">
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/logo.png">
+	<title>Elgiganten</title>
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat";
+  position: relative;
+  background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMUEisp_dR0lLR2R_K120KKTCKI3LYPMw-9Lld_BqcBSROO26oLIeGj8JjL8EmzGPOZW5kYmaK_WIy67TQuiDa9z4qrRaAunIVwkpHPYebf6_0sQeIeW_s7jDIkjvEledALNbMsaJ0wcoFtKwUFncfCt-Lr3TkZ2uX6Jueka8jcj6IiCVxZVVJI7rz/w635-h363/Untitled-1.png")!important;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+}
+/*nav bar section start*/
+nav img {
+  max-width: 150px;
+  margin: 0;
+  padding:0 0 0 1em ;
+}
+.nav-link{
+  color: #30366F;
+}
+.nav-link img{
+  max-width: 50px;
+}
+.navimg1{
+  max-width: 35px;
+}
+/*nav bar section over*/
+/*main sextion start*/
+section {
+ min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.container1 {
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #00000020;
+  border-radius: 8px;
+  background-color: white;
+}
+/*main section over*/
+
+/*survey button's work start*/
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-group input {
+  width: 100%;
+  border: 1.5px solid rgba(128, 128, 128, 0.418);
+  padding: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+button.next-btn,
+button.previous-btn,
+button.submit-btn {
+float: right;
+color: #fff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  background-color: #30366F;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: 300ms;
+  /* text-align: right; */
+}
+
+button.previous-btn {
+  float: left;
+}
+button.submit-btn {
+  background-color: aquamarine;
+}
+
+.step-1,.step-2,.step-3 {
+  color: #30366F;
+  text-align: center;
+}
+.step-1 img{
+  max-width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.step-1 p{
+  padding: 5px;
+}
+.step-1 .cont-btn {
+    display: block;
+    float: none;
+    margin: 0 auto;
+}
+.cont-btn{
+  text-align: center;
+}
+.cont-btn:hover{
+ background-color: #5DAC47;
+}
+
+.step-2 h4{
+  margin-bottom: 30px;
+}
+.step-2 .yes,.step-2 .no{
+  display: block!important;
+  margin-bottom: 20px;
+  float: none;
+  text-align: center;
+  width: 30%;
+  padding: 10px ;
+  color: #fff;
+  background-color:#30366F ;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.step-2 .yes:hover{
+   background-color: #5DAC47;
+}
+.step-2 .no:hover{
+   background-color: #5DAC47 !important;
+}
+.step-2 #yes:active{
+    background:red;
+}
+.step-2 #yes:focus{
+   background-color: red;
+}
+
+.step-3 {
+  text-align: center;
+}
+.step-3 .step-3-btn{
+  display: block!important;
+  margin: 0 0 5px 0;
+  float: none;
+  text-align: center;
+  width: 100%;
+  padding: 10px ;
+  color: #fff;
+  background-color:#30366F ;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.step-3 .step-3-btn:hover{
+ background-color: #5DAC47;
+}
+.step-4{
+  color: #30366F;
+  text-align: center;
+}
+.step-4 button {
+  padding: 7px 25px;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+    background-color:#30366F ;
+    color: #fff;
+cursor: pointer;
+  border-radius: 5px;
+  text-transform: capitalize;
+   transition: 300ms;
+}
+.step-4 button:hover{
+background-color: #5DAC47;
+}
+button{
+  outline: none;
+}
+.newClass{
+  background-color:#5DAC47 !important;
+}
+/*survey button's work over*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat&display=swap');
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+      <a class="navbar-brand d-lg-none" href="#"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbCG23DP7HJKYiPNg0A2Hpm17vjHqQDo611QfEx6r_I8YesuatcMSXBdx8xyj_xOoyHiJSCz-ao9Um9NK16AEPlZ3I99RLMdT5XJBUopzwAA2DWC10T7bZcS2vopMqMy1uD536xVEeyOsCTJl0KXuCwQ3Ghs6Q4OkehnaOZtu63uYDzDsQCl9kC7CE/s320/logo.png" alt=""></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="#">Smart Home<span class="sr-only">(current)</span></a>
+      </li>
+       <a class="d-none d-lg-block" href="#"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbCG23DP7HJKYiPNg0A2Hpm17vjHqQDo611QfEx6r_I8YesuatcMSXBdx8xyj_xOoyHiJSCz-ao9Um9NK16AEPlZ3I99RLMdT5XJBUopzwAA2DWC10T7bZcS2vopMqMy1uD536xVEeyOsCTJl0KXuCwQ3Ghs6Q4OkehnaOZtu63uYDzDsQCl9kC7CE/s320/logo.png" alt=""></a>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Find Us</a>
+      </li>
+    </ul>
+    
+  </div>
+
+</nav>
+
+  
+ <!--   nav bar over -->
+
+  
+<section>
+  <div class="cart">
+    <img src="" alt="">
+  </div>
+  <div class="container1">
+    <form>
+      <!-- Iphone   start-->
+      <div class="step step-1 active">
+        <h3>Answer a quick survey from Elgiganten and win an iPhone 14 pro!</h3>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSQ5PTD8vVdUJOG4roxODuawPA-0SC6e8BFeQtAPpxzddMTcDfvajSfPFHkT1gDYATZzBze5Rm3V19ROvtXKVmQxat7-KFUBOYTy5qP7brqWhB9NdDvPDgb9Oj7hANOo6K-ieuK0hzlHbRigMfQRCxFaZzdk2lIf9q5zHWd0xsnDzE1_M1V8MyjUgg/s320/iphone.png" alt="">
+        <p>To start, click the continue button below</p>
+        <button type="button" class="next-btn cont-btn">continue</button>
+      </div>
+    <!-- Iphone step over-->
+
+
+     <!-- yes/nostep  start-->
+      <div class="step step-2 ">
+        <h4>Have you ever bought something from Elgiganten before?</h4>
+          <button onclick="myFunction()" id="yes"class="next-btn yes">Yes</button>
+           <button onclick="myFunction()" id="no"class="next-btn no">No</button>
+     
+      </div>
+  <!-- yes/nostep  over-->
+
+
+     <!--  buying poduct step start -->
+<div class="step step-3 ">
+         <h4>Which products do you buy the most?</h4>
+          <button onclick="myFunction()" value="toggle"class="next-btn step-3-btn step-3-btn-1" id="step-3-btn-1">Computers</button>
+           <button onclick="myFunction()" class="next-btn step-3-btn step-3-btn-2">Smartphones</button>
+           <button onclick="myFunction()" class="next-btn step-3-btn step-3-btn-3">Household</button>
+           <button onclick="myFunction()" class="next-btn step-3-btn step-3-btn-4">Vacuums</button>
+           <button onclick="myFunction()" class="next-btn step-3-btn step-3-btn-5">Other</button>
+          <!--  <button onclick="myFunction()" id="yes"class="next-btn">Yes</button>
+           <button onclick="myFunction()" id="no"class="previous-btn">No</button> -->
+</div>
+ <!--  buying poduct step over -->
+
+<!--  feedback step start -->
+<div class="step step-3 ">
+         <h4>Which areas can we do better?</h4>
+          <button onclick="myFunction()" value="toggle"id="step-4-btn-1" class="next-btn  step-3-btn step-4-btn-1">Products</button>
+           <button onclick="myFunction()" value="toggle"id="step-4-btn-2"class="next-btn  step-3-btn step-4-btn-2">Customer service</button>
+           <button onclick="myFunction()" value="toggle"id="step-4-btn-3"class="next-btn  step-3-btn step-4-btn-3">Prices</button>
+           <button onclick="myFunction()" value="toggle"id="step-4-btn-4"class="next-btn  step-3-btn step-4-btn-4">Opening hours</button>
+           <button onclick="myFunction()" value="toggle"id="step-4-btn-5"class="next-btn step-3-btn step-4-btn-5">Nothing</button>
+          
+</div>
+<!--  feedback step over -->
+    <!-- yes/nostep  start-->
+      <div class="step step-2 ">
+        <h4>Would you recommend us to other?</h4>
+          <button onclick="myFunction()" id="yes"class="next-btn btn-4 yes">Yes</button>
+           <button onclick="myFunction()" id="no"class="next-btn btn-4 no">No</button>
+     
+      </div>
+  <!-- yes/nostep  over-->
+<!-- thank you step start -->
+      <div class="step step-4   ">
+       <p>Thank you for completing our survey!
+Please click the continue button below to complete the survey.</p>
+  <button class="btn-4"onclick="location.href='https://www.elgiganten.dk'">Continue</button>
+      </div>
+<!-- thank you step over -->
+    </form>
+  </div>
+</section>
+
+<!-- javascript library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- bootstrap link -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js"></script>
+<!-- font awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>	
+<script type="text/javascript" src="app.js"></script>
+<script>
+    const steps = Array.from(document.querySelectorAll("form .step"));
+const nextBtn = document.querySelectorAll("form .next-btn");
+const prevBtn = document.querySelectorAll("form .previous-btn");
+const form = document.querySelector("form");
+
+nextBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    changeStep("next");
+  });
+});
+prevBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    changeStep("prev");
+  });
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const inputs = [];
+  form.querySelectorAll("input").forEach((input) => {
+    const { name, value } = input;
+    inputs.push({ name, value });
+  });
+  console.log(inputs);
+  form.reset();
+});
+
+function changeStep(btn) {
+  let index = 0;
+  const active = document.querySelector(".active");
+  index = steps.indexOf(active);
+  steps[index].classList.remove("active");
+  if (btn === "next") {
+    index++;
+  } else if (btn === "prev") {
+    index--;
+  }
+  steps[index].classList.add("active");
+}
+
+
+$( document ).ready(function() {
+  $( "#yes" ).click(function() {
+    $( "#yes" ).css('background', '#5DAC47');
+  });
+});
+$( document ).ready(function() {
+  $( "#no" ).click(function() {
+    $( "#yes" ).css('background', '#30366F');
+  });
+});
+$( document ).ready(function() {
+  $( "#no" ).click(function() {
+    $( "#no" ).css('background', '#5DAC47');
+  });
+});
+$( document ).ready(function() {
+  $( "#yes" ).click(function() {
+    $( "#no " ).css('background', '#30366F');
+  });
+});
+
+</script>
+<script>  
+  $(document).ready(function(){  
+    $(".step-3-btn-1").click(function(){  
+        $(".step-3-btn-1").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $(".step-3-btn-2").click(function(){  
+        $(".step-3-btn-2").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $(".step-3-btn-3").click(function(){  
+        $(".step-3-btn-3").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $(".step-3-btn-4").click(function(){  
+        $(".step-3-btn-4").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $(".step-3-btn-5").click(function(){  
+        $(".step-3-btn-5").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $("#step-4-btn-1").click(function(){  
+        $("#step-4-btn-1").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $("#step-4-btn-2").click(function(){  
+        $("#step-4-btn-2").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $("#step-4-btn-3").click(function(){  
+        $("#step-4-btn-3").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $("#step-4-btn-4").click(function(){  
+        $("#step-4-btn-4").toggleClass("newClass");  
+    });  
+});  
+$(document).ready(function(){  
+    $("#step-4-btn-5").click(function(){  
+        $("#step-4-btn-5").toggleClass("newClass");  
+    });  
+});  
+</script>  
+ 
+ 
+</body>
+</html>
